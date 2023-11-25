@@ -1,3 +1,8 @@
+/**
+ * Author: Winston Trinh, October 2023
+ * File: SrcMain.cpp
+ */
+
 #include "SrcMain.h"
 #include <iostream>
 #include <random>
@@ -7,15 +12,13 @@
 
 void ProcessCommandArgs(int argc, const char* argv[])
 {
-	// TODO
 	// Check if command-line arguments are valid
     if (argc < 6) {
 		std::cout << "Please provide input in this format: <inputfile> <popsize> <generations> <mutationchance> <seed>\n";
-        return;
+	return;
     }
-
+	
 	// Part 1
-
 	// Create an input file stream for the locations input file
 	// Pass in the name of the locations input file
 	std::ifstream locationsFile(argv[1]);
@@ -47,6 +50,8 @@ void ProcessCommandArgs(int argc, const char* argv[])
 	// Close input file when finished
 	locationsFile.close();
 
+	// This was the seed used for the tests
+	// Comment this out if you want random outputs
 	std::mt19937 randGen(seed);
 
 	// Create output file stream to output generation info
