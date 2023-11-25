@@ -1,1 +1,29 @@
-
+name: build
+on: [push]
+permissions:
+  checks: write
+  contents: read
+  packages: read
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 5
+    steps:
+      - run: sudo apt-get install clang-tidy clang-tools g++-11
+      - uses: actions/checkout@v3.1.0
+      - name: Build and run tests
+        run: bash travis.sh -xe
+      - name: Build annotations
+        if: always()
+        uses: yuzutech/annotations-action@v0.4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          title: annotations (build)
+          input: diagnostics.json
+      - name: clang-tidy annotations
+        if: always()
+        uses: yuzutech/annotations-action@v0.4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          title: annotations (clang-tidy)
+          input: tidy-annotations.json
