@@ -56,8 +56,8 @@ After a specified number of generations, the program selects the best route base
 ## Where to Start
 To test this program, ensure that your system meets the prerequisites and follow the setup instructions:
 
-- **Mac Setup**: [Mac Setup Guide](https://itp435-20233.github.io/SetupMac.html)
-- **PC Setup**: [PC Setup Guide](https://itp435-20233.github.io/SetupPC.html)
+- **Mac Setup**: [Mac Setup Guide](https://itp435-20241.github.io/SetupMac.html)
+- **PC Setup**: [PC Setup Guide](https://itp435-20241.github.io/SetupPC.html)
 
 The program is executed via command line with specific parameters, including input file, population size, number of generations, mutation chance, and seed.
 
