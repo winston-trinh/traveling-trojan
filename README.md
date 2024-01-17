@@ -3,6 +3,8 @@
 ### Welcome!
 This project showcases a genetic algorithm designed to optimize tours of landmarks in Los Angeles, starting and ending at LAX. I developed this project to demonstrate my understanding of functional programming in C++, adhering strictly to rules that emphasize the use of higher-order functions with minimal side effects.
 
+<a href="#">![](images/traveling_trojan.png)</a>
+
 ### Purpose
 Traveling Trojan is a tour simulator that applies genetic algorithms to solve the Traveling Salesman Problem (TSP) in a novel and efficient way. Its primary goal is to find the best possible route visiting all landmarks with the least total distance.
 
